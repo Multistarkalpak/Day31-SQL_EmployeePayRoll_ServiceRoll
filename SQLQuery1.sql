@@ -16,3 +16,6 @@ insert into Employee_PayRoll
 
 ------Retrieve data (UC4)-----
 select *from Employee_PayRoll
+
+------Retrieve data of particular empolyee(UC5)-----
+select *from Employee_PayRoll where Name='kalpak'; 
