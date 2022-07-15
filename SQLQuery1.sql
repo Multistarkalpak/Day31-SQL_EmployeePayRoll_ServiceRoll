@@ -13,3 +13,6 @@ StartDate datetime
 ------To insert the data into Table----
 insert into Employee_PayRoll
 (Name,Salary,StartDate)values('Kalpak',30000,20-7-2022)
+
+------Retrieve data (UC4)-----
+select *from Employee_PayRoll
