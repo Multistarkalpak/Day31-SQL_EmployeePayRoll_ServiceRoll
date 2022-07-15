@@ -12,10 +12,13 @@ StartDate datetime
 
 ------To insert the data into Table----
 insert into Employee_PayRoll
-(Name,Salary,StartDate)values('Kalpak',30000,20-7-2022)
+(Name,Salary,StartDate)values('Kalpak',30000,2022-07-20)
 
 ------Retrieve data (UC4)-----
 select *from Employee_PayRoll
 
 ------Retrieve data of particular empolyee(UC5)-----
 select *from Employee_PayRoll where Name='kalpak'; 
+
+-----------RetriveAccordingtodate---------------
+SELECT * FROM Employee_PayRoll where StartDate between CAST('1905-06-19' as date) and GETDATE()
