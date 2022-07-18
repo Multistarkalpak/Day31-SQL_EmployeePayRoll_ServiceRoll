@@ -12,13 +12,22 @@ StartDate datetime
 
 ------To insert the data into Table----
 insert into Employee_PayRoll
-(Name,Salary,StartDate)values('Kalpak',30000,2022-07-20)
+(Name,Salary,StartDate)values('Kalpak',30000,getdate());
+
+insert into Employee_PayRoll
+(Name,Salary,StartDate)values('Vishwas',350000,getdate());
+
 
 ------Retrieve data (UC4)-----
 select *from Employee_PayRoll
 
 ------Retrieve data of particular empolyee(UC5)-----
-select *from Employee_PayRoll where Name='kalpak'; 
-
------------RetriveAccordingtodate---------------
-SELECT * FROM Employee_PayRoll where StartDate between CAST('1905-06-19' as date) and GETDATE()
+SELECT * FROM  employee_payroll where StartDate between CAST('2019-04-01' as date) and GETDATE();
+------------UC6-we have to add the other column as a gender to existing table-------
+Alter table Employee_payroll
+add Gender char(1)
+update Employee_PayRoll set Gender='M';
+UPDATE Employee_PayRoll set Salary=50000 where Name='Multistar';
+UPDATE Employee_PayRoll set Salary=50001,StartDate=getdate() where Name='Hiraji';
+UPDATE Employee_PayRoll set Salary=50001 where Name='Hiraji';
+UPDATE Employee_PayRoll set Salary=50001 where Name='kalpu';
