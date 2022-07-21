@@ -33,7 +33,7 @@ UPDATE Employee_PayRoll set Salary=50001 where Name='Gurpreet';
 UPDATE Employee_PayRoll set Salary=50001 where Name='kalpak';
 
 ------------UC7-sum,avrage,min,max,count-------------------
-SELECT * FROM  employee_payroll;
+SELECT * FROM  Employee_PayRoll;
 SELECT SUM(Salary) as TotalSalary from employee_payroll;
 SELECT avg(Salary) as AvergeSalary from employee_payroll;
 SELECT  MIN(Salary) as MINIMUMSalary from employee_payroll;
@@ -66,4 +66,8 @@ ADD Department varchar(200)NOT NULL default'HR';
 select * from employee_payroll;
 
 ALTER TABLE employee_payroll
-ADD Address varchar(200) default 'Chennai';
+ADD Address varchar(200) default 'Chennai'; 
+
+-------------UC9 Extend the employee table----------------
+ALTER TABLE Emlpoyee_PayRoll ADD BasicSalary float,Deductions float,TaxablePay float,IncomeTax float,NetPay float;
+select *from Employee_PayRoll
