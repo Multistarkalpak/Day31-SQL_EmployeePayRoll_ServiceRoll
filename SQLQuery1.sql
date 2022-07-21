@@ -1,5 +1,5 @@
 -------To Create Database-------
-Create database Payroll_Service2
+Create database ADDRESS_BOOK_SERVICES
 
 
 -------To Create Table (UC2)----
@@ -71,3 +71,12 @@ ADD Address varchar(200) default 'Chennai';
 -------------UC9 Extend the employee table----------------
 ALTER TABLE Emlpoyee_PayRoll ADD BasicSalary float,Deductions float,TaxablePay float,IncomeTax float,NetPay float;
 select *from Employee_PayRoll
+
+--------------UC10 ability to make same employee for the two different department-----------
+SELECT* FROM  Employee_PayRoll;
+UPDATE Employee_PayRoll set Department='Sales', Address ='Bengaluru',BasicSalary=456786, Deductions=200,TaxablePay=3000 where Name='Jivesh';
+UPDATE Employee_PayRoll set Department='Marketing', Address ='Bengaluru',BasicSalary=456796, Deductions=300,TaxablePay=2000 where Name='kalpak';
+UPDATE Employee_PayRoll set Department='HR',Address ='Bengaluru',BasicSalary=356786, Deductions=270,TaxablePay=3000 where Name='Shivraj';
+UPDATE Employee_PayRoll set Department='Marketing',Address ='Bengaluru',BasicSalary=459786, Deductions=280,TaxablePay=3000 where Name='Abhishek';
+UPDATE Employee_PayRoll set Department='Sales', Address ='Bengaluru',BasicSalary=456786, Deductions=200,TaxablePay=3000 where Name='Gurupreet';
+UPDATE Employee_PayRoll set Department='Sales', Address ='Bengaluru',BasicSalary=456786, Deductions=200,TaxablePay=3000 where Name='Vishwas';
